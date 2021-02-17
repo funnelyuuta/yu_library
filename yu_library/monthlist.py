@@ -3,10 +3,12 @@ import click
 @click.command()
 @click.option('-s',
               '--start',   
-             type=click.DateTime(formats=['%Y%m']))
+              default='201111',
+              type=click.DateTime(formats=['%Y%m']))
 @click.option('-e',
                '--end',
-             type=click.DateTime(formats=['%Y%m']))
+               default='201112',
+               type=click.DateTime(formats=['%Y%m']))
 
 def main(start, end):
     monthlist = []
